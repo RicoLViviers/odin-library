@@ -20,8 +20,7 @@ addBookToLibrary("The hobbit", "Some author", 102, false);
 addBookToLibrary("The Harry Potter", "Some author", 102, false);
 
 function createTable() {
-    const body = document.body;
-    const tbl = document.createElement("table");
+    const tbl = document.getElementById("books-table");
 
     tbl.style.width = "100px";
     tbl.style.border = "1px solid black";
@@ -29,8 +28,7 @@ function createTable() {
 
     myLibrary.forEach(book => {
         const tr = tbl.insertRow();
-
-        // Create a cell for each property of the book.
+        
         const titleCell = tr.insertCell();
         titleCell.textContent = book.title;
 
@@ -42,15 +40,11 @@ function createTable() {
 
         const readCell = tr.insertCell();
         readCell.textContent = book.read ? "Read" : "Not read";
-
-        tr.querySelectorAll("td").forEach(td => {
-            td.style.border = "1px solid black";
-        });
     });
 
-    body.appendChild(tbl);
+    document.body.appendChild(tbl);
 
 }
 
-
+createTable();
 document.body.appendChild(myBookElement)
