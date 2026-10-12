@@ -40,6 +40,7 @@ function createTable() {
         const removeButton = document.createElement("input");
         removeButton.type = "button";
         removeButton.value = "remove";
+        removeButton.id = "remove-button";
 
         removeButton.addEventListener("click", () => {
             const index = myLibrary.findIndex(
