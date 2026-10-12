@@ -46,5 +46,11 @@ function createTable() {
 
 }
 
+const addNewButton = document.getElementById("add-new");
+
+addNewButton.addEventListener("click", () => {
+    console.log("Open the form to add a new book")
+})
+
 createTable();
 document.body.appendChild(myBookElement)
