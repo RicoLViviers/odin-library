@@ -10,21 +10,28 @@
 
 <body>
     <table id="books-table">
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Pages</th>
-            <th>Read</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read Status</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="books-body"></tbody>
     </table>
     <button id="add-new">Add new book</button>
 
-    <form action="" style="display: none;" id="book-form">
-        <input type="text" placeholder="Tittle...">
-        <input type="text" placeholder="Author...">
-        <input type="number" placeholder="pages">
-        <input type="checkbox">
-        <button type="submit" id="submit-book">Submit</button>
+    <form id="book-form" style="display: none;">
+        <input type="text" id="title" placeholder="Title..." required>
+        <input type="text" id="author" placeholder="Author..." required>
+        <input type="number" id="pages" placeholder="Pages..." min="1" required>
+        <label>
+            <input type="checkbox" id="read">
+            Read?
+        </label>
+        <button type="submit">Submit</button>
     </form>
     <script src="script.js"></script>
 </body>
